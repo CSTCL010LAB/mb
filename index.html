@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的永久留言板</title>
+    <style>
+        /* 全局样式：简洁舒适的阅读体验 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f6f8fa; /* 浅灰背景 */
+            margin: 0;
+            padding: 20px;
+            color: #24292f;
+            line-height: 1.6;
+        }
+
+        /* 主容器：白色卡片风格 */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #d0d7de;
+        }
+
+        /* 标题区域 */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            color: #0969da; /* GitHub 蓝 */
+        }
+
+        .subtitle {
+            color: #57606a;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .notice {
+            display: inline-block;
+            background-color: #fff8c5;
+            color: #8250df;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 10px auto;
+            }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 头部信息 -->
+        <header>
+            <h1>💬 我的永久留言板</h1>
+            <p class="subtitle">数据存储在 GitHub Discussions，永久保存不丢失。</p>
+            <div class="notice">
+                ⚠️ 提示：首次留言需要登录 GitHub 账号（注册仅需邮箱，无需手机号）。
+            </div>
+        </header>
+
+        <!-- Giscus 评论区核心代码 (已更新为 General 分类) -->
+        <div class="giscus-wrapper">
+            <script src="https://giscus.app/client.js"
+                    data-repo="CSTCL010LAB/mb"
+                    data-repo-id="R_kgDOTSkwdg"
+                    data-category="General"
+                    data-category-id="DIC_kwDOTSkwds4DAzPh"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="preferred_color_scheme"
+                    data-lang="zh-CN"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>
